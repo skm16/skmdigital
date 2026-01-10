@@ -92,7 +92,7 @@ export default function ServicesGrid() {
               >
                 {/* Badge */}
                 {service.badge && (
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-3 right-3">
                     <Badge
                       variant={service.featured ? 'primary' : 'default'}
                       size="sm"
@@ -103,7 +103,7 @@ export default function ServicesGrid() {
                 )}
 
                 {/* Title */}
-                <h3 className="text-heading-md text-primary-800 mb-3 pr-16 whitespace-nowrap transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-primary-700 group-hover:to-accent-500 group-hover:bg-clip-text group-hover:text-transparent">
+                <h3 className="text-heading-md text-primary-800 mb-3 pr-24 pt-2 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-primary-700 group-hover:to-accent-500 group-hover:bg-clip-text group-hover:text-transparent">
                   {service.title}
                 </h3>
 

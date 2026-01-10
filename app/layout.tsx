@@ -17,6 +17,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'SKM.digital - White Label Development for Technical Complexity',
   description: 'Headless architectures. AI integration. Enterprise performance. We handle the technical challenges that make agencies nervous.',
+  icons: {
+    icon: '/skm-favicon.jpg',
+    shortcut: '/skm-favicon.jpg',
+    apple: '/skm-favicon.jpg',
+  },
   openGraph: {
     title: 'SKM.digital - White Label Development for Technical Complexity',
     description: 'Headless architectures. AI integration. Enterprise performance.',
