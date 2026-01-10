@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'SKM.digital - Custom Technical Solutions for Agencies | WordPress, Next.js, AI Integration',
+  title: 'White Label WordPress, AI & Next.js Development | SKM.digital',
   description: 'White-label technical partner for agencies. Multi-system integration, AI-powered automation, modern web applications, enterprise WordPress. 7+ years building solutions for national organizations.',
   keywords: [
     'white label wordpress development',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     apple: '/skm-favicon.jpg',
   },
   openGraph: {
-    title: 'Custom Technical Solutions for Modern Web Challenges',
+    title: 'White Label WordPress, AI & Next.js Development for Agencies',
     description: 'Multi-system integration. AI-powered automation. Modern web applications. Enterprise WordPress.',
     url: 'https://skm.digital',
     siteName: 'SKM.digital',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SKM.digital - Custom Technical Solutions for Agencies',
+    title: 'White Label WordPress, AI & Next.js Development | SKM.digital',
     description: 'White-label technical partner for agencies. Multi-system integration, AI-powered automation, modern web applications, enterprise WordPress.',
     images: ['/og-image.jpg'],
   },
