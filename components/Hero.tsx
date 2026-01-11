@@ -64,13 +64,11 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-      {/* Animated Gradient Background */}
+      {/* Gradient Background (static for better performance) */}
       <div
-        className="absolute inset-0 animate-fade-in"
+        className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, #0f1b2e 0%, #234a7e 50%, #2c5282 100%)',
-          backgroundSize: '200% 200%',
-          animation: 'gradientShift 15s ease infinite, fadeIn 0.3s ease-in'
+          background: 'linear-gradient(135deg, #0f1b2e 0%, #234a7e 50%, #2c5282 100%)'
         }}
       />
 
@@ -107,17 +105,16 @@ model.classify(data)`}
       {/* Main Content */}
       <div className="container-default text-center z-10 relative px-6">
         {/* Main Headline with Gradient Text */}
-        <h1 className="text-display-md lg:text-display-lg mb-6 animate-fade-in-down">
+        <h1 className="text-heading-lg sm:text-display-md lg:text-display-lg mb-6 animate-fade-in-down">
           <div
             className="mb-2 bg-gradient-to-r from-white to-accent-100 bg-clip-text text-transparent"
             style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
           >
-            Technical work agencies don’t want to staff for.
+            Technical work agencies don't want to staff for.
           </div>
           {/* Typewriter Line with Glow Effect */}
-          <div className="text-display-sm text-accent-200 h-[1.3em] flex items-center justify-center">
+          <div className="text-heading-md sm:text-heading-xl lg:text-display-sm text-accent-200 min-h-[2.6em] sm:min-h-[1.3em] flex items-center justify-center">
             <span
-              className="whitespace-nowrap"
               style={{
                 textShadow: '0 0 20px rgba(99, 179, 237, 0.5)'
               }}

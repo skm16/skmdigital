@@ -17,6 +17,7 @@ interface AnimatedSectionProps {
   threshold?: number
   triggerOnce?: boolean
   className?: string
+  as?: React.ElementType
 }
 
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({
@@ -26,9 +27,10 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   threshold = 0.2,
   triggerOnce = true,
   className = '',
+  as: Component = 'div',
 }) => {
   const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
   const hasTriggered = useRef(false)
 
   useEffect(() => {
@@ -77,8 +79,8 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   const animationClass = animationClasses[animation]
 
   return (
-    <div
-      ref={sectionRef}
+    <Component
+      ref={sectionRef as React.RefObject<HTMLDivElement>}
       className={`${className} ${isVisible ? animationClass : ''}`}
       style={{
         opacity: isVisible ? undefined : 0,
@@ -86,7 +88,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
       }}
     >
       {children}
-    </div>
+    </Component>
   )
 }
 

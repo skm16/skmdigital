@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="text-center md:text-right">
             <a
               href="mailto:sean@skm.digital"
-              className="inline-flex items-center text-body-md text-accent-300 hover:text-accent-100 transition-colors mb-4"
+              className="inline-flex items-center text-body-md text-accent-100 hover:text-white transition-colors mb-4"
             >
               <Mail size={16} className="mr-2" />
               sean@skm.digital

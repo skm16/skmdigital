@@ -26,13 +26,11 @@ export default function ContactSection() {
       id="contact"
       className="space-section-lg relative overflow-hidden text-white"
     >
-      {/* Animated Gradient Background */}
+      {/* Gradient Background (static for better performance) */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, #2563ab 0%, #3182ce 50%, #234a7e 100%)',
-          backgroundSize: '200% 200%',
-          animation: 'gradientShift 15s ease infinite'
+          background: 'linear-gradient(135deg, #2563ab 0%, #3182ce 50%, #234a7e 100%)'
         }}
       />
 

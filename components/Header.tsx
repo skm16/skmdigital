@@ -57,7 +57,10 @@ export default function Header() {
 
           {/* CTA Button with Variant Switching */}
           <a href="#contact">
-            <Button variant={scrolled ? 'primary' : 'light'} size="md">
+            <Button variant={scrolled ? 'primary' : 'light'} size="sm" className="sm:hidden">
+              Get Quote
+            </Button>
+            <Button variant={scrolled ? 'primary' : 'light'} size="md" className="hidden sm:inline-flex">
               Get a Fixed-Price Quote
             </Button>
           </a>

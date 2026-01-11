@@ -36,15 +36,15 @@ export default function SolutionSection() {
               {benefits.map((benefit, index) => (
                 <AnimatedSection
                   key={index}
+                  as="li"
                   animation="fadeInRight"
                   delay={100 * index}
+                  className="flex items-start bg-gray-50 p-4 rounded-lg border-l-3 border-accent-400 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-md group"
                 >
-                  <li className="flex items-start bg-gray-50 p-4 rounded-lg border-l-3 border-accent-400 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-md group">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-400 flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
-                      <Check size={14} className="text-white" />
-                    </div>
-                    <span className="text-body-md text-gray-800">{benefit}</span>
-                  </li>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-400 flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
+                    <Check size={14} className="text-white" />
+                  </div>
+                  <span className="text-body-md text-gray-800">{benefit}</span>
                 </AnimatedSection>
               ))}
             </ul>
