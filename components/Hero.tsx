@@ -16,7 +16,7 @@ export default function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
-  const [scrollY, setScrollY] = useState(0)
+  const [scrolledPastIndicator, setScrolledPastIndicator] = useState(false)
 
   // Typewriter effect
   useEffect(() => {
@@ -46,9 +46,18 @@ export default function Hero() {
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, phraseIndex])
 
-  // Track scroll for scroll indicator fade
+  // Track scroll for scroll indicator fade (throttled with rAF)
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
+    let ticking = false
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolledPastIndicator(window.scrollY > 100)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -142,7 +151,7 @@ model.classify(data)`}
       {/* Scroll Indicator */}
       <div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500"
-        style={{ opacity: scrollY > 100 ? 0 : 1 }}
+        style={{ opacity: scrolledPastIndicator ? 0 : 1 }}
       >
         <div className="flex flex-col items-center text-accent-200 animate-bounce">
           <ChevronDown size={32} />
